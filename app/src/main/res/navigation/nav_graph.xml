@@ -9,9 +9,9 @@
         android:name="android.hammersystemtest.feature.menuFragment.MenuFragment"
         android:label="MenuFragment" />
     <fragment
-        android:id="@+id/cartFragment"
-        android:name="android.hammersystemtest.feature.cartFragment.CartFragment"
-        android:label="CartFragment" />
+        android:id="@+id/basketFragment"
+        android:name="android.hammersystemtest.feature.basketFragment.BasketFragment"
+        android:label="BasketFragment" />
     <fragment
         android:id="@+id/profileFragment"
         android:name="android.hammersystemtest.feature.profileFragment.ProfileFragment"
