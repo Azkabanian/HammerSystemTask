@@ -8,4 +8,12 @@
         android:id="@+id/menuFragment"
         android:name="android.hammersystemtest.feature.menuFragment.MenuFragment"
         android:label="MenuFragment" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="android.hammersystemtest.feature.cartFragment.CartFragment"
+        android:label="CartFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="android.hammersystemtest.feature.profileFragment.ProfileFragment"
+        android:label="ProfileFragment" />
 </navigation>
