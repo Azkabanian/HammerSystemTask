@@ -1,8 +1,8 @@
 package android.hammersystemtest.domain
 
-import android.hammersystemtest.domain.model.FoodResponse
+import android.hammersystemtest.domain.model.MealResponse
 
 interface HammerSystemTestRepository {
 
-    suspend fun getRandomFood(): FoodResponse
+    suspend fun getRandomMeal(): MealResponse
 }
