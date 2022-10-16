@@ -29,7 +29,7 @@ object AppModule {
 
         return Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl("www.themealdb.com/api/json/v1/1/")
+            .baseUrl("https://api.spoonacular.com")
             .client(okHttpClient)
             .build()
             .create(HammerSystemTestApi::class.java)

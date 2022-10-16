@@ -1,4 +1,29 @@
 package android.hammersystemtest.feature.menuFragment.menuViewModel
 
-class MenuViewModel {
+import android.hammersystemtest.domain.HammerSystemTestRepository
+import android.hammersystemtest.domain.model.MealResponse
+import android.util.Log
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.launch
+import javax.inject.Inject
+
+@HiltViewModel
+class MenuViewModel @Inject constructor(
+    private val repository: HammerSystemTestRepository
+): ViewModel() {
+
+    val mealResponse: MutableLiveData<MealResponse> = MutableLiveData()
+
+    init {
+        getServiceResponse()
+    }
+
+    private fun getServiceResponse() = viewModelScope.launch {
+        val response = repository.getRandomMeal()
+        mealResponse.postValue(response)
+        Log.e("ServiceResponse", response.toString())
+    }
 }
