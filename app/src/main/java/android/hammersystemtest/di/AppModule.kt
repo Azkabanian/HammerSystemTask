@@ -29,7 +29,7 @@ object AppModule {
 
         return Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl("https://api.spoonacular.com")
+            .baseUrl("https://ig-food-menus.herokuapp.com/")
             .client(okHttpClient)
             .build()
             .create(HammerSystemTestApi::class.java)
