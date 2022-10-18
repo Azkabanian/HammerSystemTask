@@ -1,98 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_height="match_parent">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
+        android:id="@+id/bottom_appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         android:fitsSystemWindows="true">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            app:contentScrim="@color/white"
+            android:layout_height="wrap_content"
             android:fitsSystemWindows="true"
-            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed|snap">
-            
-            <ImageView
+            app:contentScrim="@color/white"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFoodListHorizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_basket"/>
+                android:layout_height="160dp"
+                android:layout_marginTop="66dp"
+                tools:listitem="@layout/item_food_discount" />
+
 
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
+                android:id="@+id/above_toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_collapseMode="pin"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                app:layout_collapseMode="pin"/>
+                app:titleTextColor="@color/black">
+
+            <com.skydoves.powerspinner.PowerSpinnerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/main_city"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:spinner_arrow_padding="8dp"
+                app:spinner_arrow_tint="@color/black"
+                app:spinner_item_array="@array/cities"
+                app:spinner_popup_animation="normal"
+                app:spinner_popup_background="@color/white"
+                app:spinner_popup_width="180dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="14dp"
+                android:src="@drawable/ic_round_qr_code_scanner" />
+            </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
         <HorizontalScrollView
             android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:layout_gravity="bottom"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:scrollbars="none">
 
             <com.google.android.material.chip.ChipGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                style="@style/Widget.Material3.Chip.Input"
-                app:singleLine="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="60dp"
                 android:padding="4dp"
-                app:singleSelection="true"
-                app:chipSpacingHorizontal="12dp">
+                app:chipSpacingHorizontal="12dp"
+                app:singleLine="true"
+                app:singleSelection="true">
 
                 <com.google.android.material.chip.Chip
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/pizza"/>
+                    app:rippleColor="@color/pink_red"
+                    android:text="@string/pizza" />
 
                 <com.google.android.material.chip.Chip
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/combo"/>
+                    android:text="@string/combo"
+                    app:rippleColor="@color/pink_red"
+                    app:singleSelection="true" />
 
                 <com.google.android.material.chip.Chip
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/dessert"/>
+                    app:rippleColor="@color/pink_red"
+                    android:text="@string/dessert" />
 
                 <com.google.android.material.chip.Chip
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/snack"/>
+                    app:rippleColor="@color/pink_red"
+                    android:text="@string/snack" />
 
                 <com.google.android.material.chip.Chip
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/drink"/>
+                    app:rippleColor="@color/pink_red"
+                    android:text="@string/drink" />
 
                 <com.google.android.material.chip.Chip
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/sauce"/>
+                    app:rippleColor="@color/pink_red"
+                    android:text="@string/sauce" />
             </com.google.android.material.chip.ChipGroup>
         </HorizontalScrollView>
+
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.core.widget.NestedScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_marginTop="30dp">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvFoodList"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="8dp"
-            tools:listitem="@layout/item_food_list"/>
-    </androidx.core.widget.NestedScrollView>
+            tools:itemCount="2"
+            tools:listitem="@layout/item_food_list" />
+    </LinearLayout>
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -3,14 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/DAndroidStudioProjects/HammerSystemTest/app/src/main/res/drawable-v24/background_of_item_food_list.xml" value="0.2295" />
         <entry key="..\:/DAndroidStudioProjects/HammerSystemTest/app/src/main/res/drawable-v24/rounded_background.xml" value="0.2345" />
+        <entry key="..\:/DAndroidStudioProjects/HammerSystemTest/app/src/main/res/drawable/ic_arrow_down.xml" value="0.2145" />
+        <entry key="..\:/DAndroidStudioProjects/HammerSystemTest/app/src/main/res/drawable/ic_round_qr_code_scanner.xml" value="0.121" />
         <entry key="..\:/DAndroidStudioProjects/HammerSystemTest/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/DAndroidStudioProjects/HammerSystemTest/app/src/main/res/layout/fragment_cart.xml" value="0.24895833333333334" />
-        <entry key="..\:/DAndroidStudioProjects/HammerSystemTest/app/src/main/res/layout/fragment_menu.xml" value="0.2" />
+        <entry key="..\:/DAndroidStudioProjects/HammerSystemTest/app/src/main/res/layout/fragment_menu.xml" value="0.176" />
         <entry key="..\:/DAndroidStudioProjects/HammerSystemTest/app/src/main/res/layout/fragment_profile.xml" value="0.24895833333333334" />
         <entry key="..\:/DAndroidStudioProjects/HammerSystemTest/app/src/main/res/layout/item_discount.xml" value="0.264" />
+        <entry key="..\:/DAndroidStudioProjects/HammerSystemTest/app/src/main/res/layout/item_food_discount.xml" value="0.2" />
         <entry key="..\:/DAndroidStudioProjects/HammerSystemTest/app/src/main/res/layout/item_food_list.xml" value="0.2" />
+        <entry key="..\:/DAndroidStudioProjects/HammerSystemTest/app/src/main/res/layout/spinner.xml" value="0.24895833333333334" />
         <entry key="..\:/DAndroidStudioProjects/HammerSystemTest/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.24895833333333334" />
+        <entry key="..\:/DAndroidStudioProjects/HammerSystemTest/app/src/main/res/menu/item_toolbar.xml" value="0.2" />
+        <entry key="..\:/DAndroidStudioProjects/HammerSystemTest/app/src/main/res/menu/spinner.xml" value="0.24895833333333334" />
       </map>
     </option>
   </component>

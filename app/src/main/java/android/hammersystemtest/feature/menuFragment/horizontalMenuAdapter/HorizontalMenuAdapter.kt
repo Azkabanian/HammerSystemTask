@@ -1,6 +1,6 @@
-package android.hammersystemtest.feature.menuFragment.mainMenuAdapter
+package android.hammersystemtest.feature.menuFragment.horizontalMenuAdapter
 
-import android.hammersystemtest.databinding.ItemFoodListBinding
+import android.hammersystemtest.databinding.ItemFoodDiscountBinding
 import android.hammersystemtest.domain.model.MealResponseItem
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 
-class MainMenuAdapter : RecyclerView.Adapter<MainMenuAdapter.MealViewHolder>() {
+class HorizontalMenuAdapter : RecyclerView.Adapter<HorizontalMenuAdapter.MealViewHolder>() {
 
     private val differCallback = object : DiffUtil.ItemCallback<MealResponseItem>() {
         override fun areItemsTheSame(oldItem: MealResponseItem, newItem: MealResponseItem) =
@@ -21,14 +21,12 @@ class MainMenuAdapter : RecyclerView.Adapter<MainMenuAdapter.MealViewHolder>() {
 
     val differ = AsyncListDiffer(this, differCallback)
 
-    inner class MealViewHolder(private val binding: ItemFoodListBinding) :
+    inner class MealViewHolder(private val binding: ItemFoodDiscountBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(mealItem: MealResponseItem) {
             binding.apply {
-                Picasso.get().load(mealItem.img).into(ivMealImage)
-                tvTitle.text = mealItem.name
-                tvDescription.text = mealItem.dsc
+                Picasso.get().load(mealItem.img).into(ivMealImageHorizontal)
             }
         }
 
@@ -36,7 +34,7 @@ class MainMenuAdapter : RecyclerView.Adapter<MainMenuAdapter.MealViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MealViewHolder {
-        val binding = ItemFoodListBinding
+        val binding = ItemFoodDiscountBinding
             .inflate(
                 LayoutInflater.from(parent.context),
                 parent,

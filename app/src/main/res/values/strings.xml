@@ -10,4 +10,18 @@
     <string name="snack">Закуски</string>
     <string name="drink">Напитки</string>
     <string name="sauce">Соусы</string>
+    <string name="main_city">Москва</string>
+    <string name="title">TITLE</string>
+    <string name="description">DESCRIPTION</string>
+
+    <string-array name="cities">
+        <item>Москва</item>
+        <item>Санкт-Петербург</item>
+        <item>Новосибирск</item>
+        <item>Екатеринбург</item>
+        <item>Казань</item>
+        <item>Нижний Новгород</item>
+        <item>Челябинск</item>
+        <item>Самара</item>
+    </string-array>
 </resources>
