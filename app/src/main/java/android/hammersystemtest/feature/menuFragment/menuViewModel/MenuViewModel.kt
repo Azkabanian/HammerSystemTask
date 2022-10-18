@@ -1,7 +1,7 @@
 package android.hammersystemtest.feature.menuFragment.menuViewModel
 
-import android.hammersystemtest.domain.HammerSystemTestRepository
 import android.hammersystemtest.domain.model.MealResponse
+import android.hammersystemtest.domain.useCase.GetRandomMealUseCase
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -12,7 +12,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MenuViewModel @Inject constructor(
-    private val repository: HammerSystemTestRepository
+    private val randomUseCase: GetRandomMealUseCase
 ): ViewModel() {
 
     val mealResponse: MutableLiveData<MealResponse> = MutableLiveData()
@@ -22,7 +22,7 @@ class MenuViewModel @Inject constructor(
     }
 
     private fun getServiceResponse() = viewModelScope.launch {
-        val response = repository.getRandomMeal()
+        val response = randomUseCase.getRandomMeal()
         mealResponse.postValue(response)
         Log.e("ServiceResponse", response.toString())
     }
